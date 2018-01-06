@@ -2,6 +2,6 @@
 {
     public interface IConfigurationService
     {
-        string ApplicationTitle { get; set; }
+        string ApplicationName { get; set; }
     }
 }
