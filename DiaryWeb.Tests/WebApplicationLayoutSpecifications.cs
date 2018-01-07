@@ -10,7 +10,7 @@ namespace DiaryWeb.Tests
     public class WebApplicationLayoutSpecifications
     {
         [Fact]
-        public void ConfigurationModule_should_supply_application_name()
+        public void ConfigurationModuleShouldSupplyApplicationName()
         {
             //arrange 
             const string actualName="Test Title";
@@ -25,7 +25,7 @@ namespace DiaryWeb.Tests
         }
 
         [Fact]
-        public void HomeController_can_set_application_name()
+        public void HomeControllerCanSetApplicationName()
         {
             //arrange
             const string applicationName="Test Application";
