@@ -4,7 +4,7 @@
     {
         public ConfigurationService()
         {
-            ApplicationName = "Dairy";
+            ApplicationName = "Diary";
         }
 
         public string ApplicationName { get; set; }
