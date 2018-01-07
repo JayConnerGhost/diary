@@ -7,18 +7,16 @@ using DiaryWeb.Services;
 
 namespace DiaryWeb.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private readonly IConfigurationService _configuration;
 
-        public HomeController(IConfigurationService configuration)
+        public HomeController(IConfigurationService configuration):base(configuration)
         {
-            _configuration = configuration;
         }
 
         public ActionResult Index()
         {
-            ViewData["ApplicationName"] = _configuration.ApplicationName;
+            ViewData["ApplicationName"] = Configuration.ApplicationName;
             return View();
         }
         
