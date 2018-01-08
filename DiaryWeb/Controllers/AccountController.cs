@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using DiaryWeb.Models;
+using DiaryWeb.Services;
 
 namespace DiaryWeb.Controllers
 {
@@ -22,7 +23,7 @@ namespace DiaryWeb.Controllers
         {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager,IConfigurationService configurationService)
         {
             UserManager = userManager;
             SignInManager = signInManager;

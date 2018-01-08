@@ -104,7 +104,7 @@
       <Name>Diary.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\DiaryWeb\DiaryWeb.csproj">
-      <Project>{70C320AF-375F-4985-8A2D-BD4B7D3AC33B}</Project>
+      <Project>{70c320af-375f-4985-8a2d-bd4b7d3ac33b}</Project>
       <Name>DiaryWeb</Name>
     </ProjectReference>
   </ItemGroup>

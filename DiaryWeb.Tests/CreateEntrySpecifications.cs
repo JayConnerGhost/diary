@@ -15,26 +15,26 @@ namespace DiaryWeb.Tests
         public void TitleCanBeSet()
         {
             //arrange
-            const string actualTitle="article title";
-            const string expectedTitle="article title";
+            const string actualTitle = "article title";
+            const string expectedTitle = "article title";
             var entryModel = Substitute.For<IEntryModel>();
             entryModel.Title.Returns(actualTitle);
-            
+
             //act+assert
-            Assert.Equal(expectedTitle,entryModel.Title);
+            Assert.Equal(expectedTitle, entryModel.Title);
         }
 
         [Fact]
         public void PublishDateCanBeSet()
         {
             //arrange
-            var expectedDate=new DateTime(1,1,1);
-            var actualPublishDate=new DateTime(1,1,1);
-            var entryModel=Substitute.For<IEntryModel>();
+            var expectedDate = new DateTime(1, 1, 1);
+            var actualPublishDate = new DateTime(1, 1, 1);
+            var entryModel = Substitute.For<IEntryModel>();
             entryModel.PublishDate.Returns(actualPublishDate);
 
             //act+assert
-            Assert.Equal(expectedDate,entryModel.PublishDate);
+            Assert.Equal(expectedDate, entryModel.PublishDate);
         }
 
         [Fact]
@@ -42,46 +42,45 @@ namespace DiaryWeb.Tests
         {
             //arrange
 
-            const string expectedContent="#Fishing";
-            var entryModel=Substitute.For<IEntryModel>();
-            var actualTag=Substitute.For<ITag>();
+            const string expectedContent = "#Fishing";
+            var entryModel = Substitute.For<IEntryModel>();
+            var actualTag = Substitute.For<ITag>();
             actualTag.Content.Returns(expectedContent);
-            entryModel.Tags.Returns(new List<ITag>(){actualTag});
-            
+            entryModel.Tags.Returns(new List<ITag>() {actualTag});
+
             //act+assert
-            Assert.Equal(expectedContent,entryModel.Tags.First().Content);
+            Assert.Equal(expectedContent, entryModel.Tags.First().Content);
         }
 
         [Fact]
         public void MultipleTagsCanBeSet()
         {
-            const int expectedCount=3;
+            const int expectedCount = 3;
             //arrange
-            IEntryModel entry=new EntryModel();
+            IEntryModel entry = new EntryModel();
             entry.Tags.Add(new Tag());
             entry.Tags.Add(new Tag());
             entry.Tags.Add(new Tag());
 
             //act+assert
-            var actualCount=entry.Tags.Count;
-            Assert.Equal(expectedCount,actualCount);
+            var actualCount = entry.Tags.Count;
+            Assert.Equal(expectedCount, actualCount);
         }
 
         [Fact]
         public void ContentCanBeSet()
         {
             //arrange
-            const string expectedContent="some content";
-            const string content="some content";
-            var entry=Substitute.For<IEntryModel>();
+            const string expectedContent = "some content";
+            const string content = "some content";
+            var entry = Substitute.For<IEntryModel>();
             entry.Content.Returns(content);
 
             //act
-            var actualContent=entry.Content;
+            var actualContent = entry.Content;
 
             //assert
-            Assert.Equal(expectedContent,actualContent);
+            Assert.Equal(expectedContent, actualContent);
         }
-
     }
 }
