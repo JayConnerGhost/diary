@@ -54,11 +54,35 @@ namespace DiaryWeb.Tests
         [Fact]
         public void MultipleTagsCanBeSet()
         {
+            const int expectedCount=3;
             //arrange
+            IEntryModel entry=new EntryModel();
+            entry.Tags.Add(new Tag());
+            entry.Tags.Add(new Tag());
+            entry.Tags.Add(new Tag());
 
             //act+assert
+            var actualCount=entry.Tags.Count;
+            Assert.Equal(expectedCount,actualCount);
         }
 
+    }
+
+    public class Tag : ITag
+    {
+        public string Content { get; set; }
+    }
+
+    public class EntryModel : IEntryModel
+    {
+        public EntryModel()
+        {
+            Tags=new List<ITag>();
+        }
+
+        public string Title { get; set; }
+        public DateTime PublishDate { get; set; }
+        public ICollection<ITag> Tags { get; set; }
     }
 
     public interface ITag
