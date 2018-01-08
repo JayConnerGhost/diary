@@ -99,6 +99,10 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Diary.Models\Diary.Models.csproj">
+      <Project>{2BF03E6F-B67E-4BEE-90A7-4AE505231959}</Project>
+      <Name>Diary.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DiaryWeb\DiaryWeb.csproj">
       <Project>{70C320AF-375F-4985-8A2D-BD4B7D3AC33B}</Project>
       <Name>DiaryWeb</Name>
