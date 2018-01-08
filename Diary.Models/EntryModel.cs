@@ -13,5 +13,6 @@ namespace Diary.Models
         public string Title { get; set; }
         public DateTime PublishDate { get; set; }
         public ICollection<ITag> Tags { get; set; }
+        public string Content { get; set; }
     }
 }

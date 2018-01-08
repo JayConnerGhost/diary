@@ -8,5 +8,6 @@ namespace Diary.Models
         string Title { get; set; }
         DateTime PublishDate { get; set; }
         ICollection<ITag> Tags { get; set; }
+        string Content { get; set; }
     }
 }

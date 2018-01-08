@@ -67,5 +67,21 @@ namespace DiaryWeb.Tests
             Assert.Equal(expectedCount,actualCount);
         }
 
+        [Fact]
+        public void ContentCanBeSet()
+        {
+            //arrange
+            const string expectedContent="some content";
+            const string content="some content";
+            var entry=Substitute.For<IEntryModel>();
+            entry.Content.Returns(content);
+
+            //act
+            var actualContent=entry.Content;
+
+            //assert
+            Assert.Equal(expectedContent,actualContent);
+        }
+
     }
 }
