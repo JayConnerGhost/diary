@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiaryWeb.Tests", "DiaryWeb.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diary.Models", "Diary.Models\Diary.Models.csproj", "{2BF03E6F-B67E-4BEE-90A7-4AE505231959}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diary.Database", "Diary.Database\Diary.Database.csproj", "{461E7ED2-1038-4347-AEA9-5F628BDB759A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,12 +29,16 @@ Global
 		{2BF03E6F-B67E-4BEE-90A7-4AE505231959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BF03E6F-B67E-4BEE-90A7-4AE505231959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BF03E6F-B67E-4BEE-90A7-4AE505231959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{461E7ED2-1038-4347-AEA9-5F628BDB759A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461E7ED2-1038-4347-AEA9-5F628BDB759A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461E7ED2-1038-4347-AEA9-5F628BDB759A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461E7ED2-1038-4347-AEA9-5F628BDB759A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
 		SolutionGuid = {3D86E543-AEE2-4989-A2A8-A5FB3520FACF}
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
 	EndGlobalSection
 EndGlobal

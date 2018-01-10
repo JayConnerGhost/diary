@@ -100,8 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateEntrySpecifications.cs" />
-    <Compile Include="WebApplicationLayoutSpecifications.cs" />
+    <Compile Include="Database\EntrySpecifications.cs" />
+    <Compile Include="Unit\EntryStructureSpecifications.cs" />
+    <Compile Include="Unit\WebApplicationLayoutSpecifications.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +113,10 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Diary.Database\Diary.Database.csproj">
+      <Project>{461E7ED2-1038-4347-AEA9-5F628BDB759A}</Project>
+      <Name>Diary.Database</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Diary.Models\Diary.Models.csproj">
       <Project>{2BF03E6F-B67E-4BEE-90A7-4AE505231959}</Project>
       <Name>Diary.Models</Name>
@@ -121,6 +126,7 @@
       <Name>DiaryWeb</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

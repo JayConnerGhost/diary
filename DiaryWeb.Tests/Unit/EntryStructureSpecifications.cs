@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Diary.Models;
-using DiaryWeb.Models;
 using NSubstitute;
 using Xunit;
 
-namespace DiaryWeb.Tests
+namespace DiaryWeb.Tests.Unit
 {
-    public class CreateEntrySpecifications
+    public class EntryStructureSpecifications
     {
         [Fact]
         public void TitleCanBeSet()
