@@ -1,4 +1,5 @@
 ﻿using System;
+using Diary.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;

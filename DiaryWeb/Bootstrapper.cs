@@ -1,7 +1,7 @@
 using System.Data.Entity;
+using System.Web;
 using System.Web.Mvc;
 using DiaryWeb.Controllers;
-using DiaryWeb.Models;
 using DiaryWeb.Services;
 using Microsoft.Practices.Unity;
 using Unity.Mvc3;
@@ -31,10 +31,14 @@ namespace DiaryWeb
 
             // register all your components with the container here
             // it is NOT necessary to register your controllers
-
-            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>();
-            container.RegisterType<UserManager<ApplicationUser>>();
-            container.RegisterType<DbContext, ApplicationDbContext>();
+            container.RegisterType<IAuthenticationManager>(
+                new InjectionFactory(
+                    o => System.Web.HttpContext.Current.GetOwinContext().Authentication
+                )
+            );
+            container.RegisterType<IUserStore<Diary.Models.ApplicationUser>, UserStore<Diary.Models.ApplicationUser>>();
+            container.RegisterType<UserManager<Diary.Models.ApplicationUser>>();
+            container.RegisterType<DbContext, Diary.Models.ApplicationDbContext>();
             container.RegisterType<ApplicationUserManager>();
             container.RegisterType<AccountController>(new InjectionConstructor());
             container.RegisterType<IConfigurationService, ConfigurationService>();

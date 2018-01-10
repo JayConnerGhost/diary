@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Diary.Models;
+using DiaryWeb.Models;
 using NSubstitute;
 using Xunit;
 
@@ -60,7 +61,7 @@ namespace DiaryWeb.Tests
             IEntryModel entry = new EntryModel();
             entry.Tags.Add(new Tag());
             entry.Tags.Add(new Tag());
-            entry.Tags.Add(new Tag());
+            entry.Tags.Add(new Tag()); 
 
             //act+assert
             var actualCount = entry.Tags.Count;
@@ -83,4 +84,23 @@ namespace DiaryWeb.Tests
             Assert.Equal(expectedContent, actualContent);
         }
     }
-}
+    public class AssociateEntrySpecifications
+    {
+        [Fact]
+        public void AssociateApplicationUserToEntry()
+        {
+            //arrange
+            const string username="test@test.com";
+            var entryModel=Substitute.For<IEntryModel>();
+            var applicationUser = new ApplicationUser {UserName = username};
+            entryModel.ApplicationUser.Returns(applicationUser);
+            
+            //act
+            var actualUserName=entryModel.ApplicationUser.UserName;
+
+            //assert
+            Assert.Equal(username,actualUserName);
+        }
+
+    }
+ }
