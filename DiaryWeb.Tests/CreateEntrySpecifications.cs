@@ -102,5 +102,18 @@ namespace DiaryWeb.Tests
             Assert.Equal(username,actualUserName);
         }
 
+        [Fact]
+        public void AssociateEntryToApplicationUser()
+        {
+            //arrange
+            var applicationUser = new ApplicationUser {Entrys = new List<IEntryModel> {Substitute.For<IEntryModel>()}};
+
+            //act
+            var entry=applicationUser.Entrys.First();
+            
+            //assert
+            Assert.IsAssignableFrom<IEntryModel>(entry);
+        }
+
     }
  }

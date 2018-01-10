@@ -1,4 +1,7 @@
-﻿using System.Security.Claims;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -15,6 +18,8 @@ namespace Diary.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public virtual ICollection<IEntryModel> Entrys { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
