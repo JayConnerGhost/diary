@@ -223,9 +223,11 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DiaryContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Services\ConfigurationService.cs" />
     <Compile Include="Services\IConfigurationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

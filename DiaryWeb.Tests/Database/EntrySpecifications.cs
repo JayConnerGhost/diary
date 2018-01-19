@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Diary.Database;
 using Diary.Models;
 using Xunit;
 using System.Data.Entity;
@@ -21,8 +19,7 @@ namespace DiaryWeb.Tests.Database
             System.Data.Entity.Database.SetInitializer(new TestDatabaseInitilizer());
             const string title="TestTitle";
             var entry = new EntryModel {Title = title};
-
-
+            
             //act
             var storedId=SaveEntryReturnId(entry);
             var returnedEntry=FindEntryBy(storedId);
@@ -52,10 +49,5 @@ namespace DiaryWeb.Tests.Database
             }
             return entry.Id;
         }
-    }
-
-    public class TestDatabaseInitilizer : DropCreateDatabaseAlways<DiaryContext>
-    {
-
     }
 }

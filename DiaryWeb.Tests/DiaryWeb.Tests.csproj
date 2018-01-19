@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\EntrySpecifications.cs" />
+    <Compile Include="Database\TestDatabaseInitilizer.cs" />
     <Compile Include="Unit\EntryStructureSpecifications.cs" />
     <Compile Include="Unit\WebApplicationLayoutSpecifications.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

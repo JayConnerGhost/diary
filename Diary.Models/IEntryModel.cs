@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using DiaryWeb.Models;
 
 namespace Diary.Models
 {

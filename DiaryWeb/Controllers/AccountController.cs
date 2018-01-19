@@ -9,7 +9,6 @@ using Diary.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using DiaryWeb.Models;
 using DiaryWeb.Services;
 
 namespace DiaryWeb.Controllers
